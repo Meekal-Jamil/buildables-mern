@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Day 4</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container">
+			<a class="brand" href="#">
+				<img src="buildables.png" alt="Buildables Logo" class="brand-logo">
+				Buildables
+			</a>
+			<nav class="nav" aria-label="Main navigation">
+				<a class="nav__link is-active" href="#home">Home</a>
+				<a class="nav__link" href="#properties">Properties</a>
+				<a class="nav__link" href="#examples">Examples</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section id="home" class="hero">
+			<div class="container">
+				<h1 class="hero__title">CSS Properties</h1>
+				<p class="hero__subtitle">Exploring essential CSS properties with practical examples.</p>
+				<div class="hero__actions">
+					<a class="btn btn--primary" href="https://youtu.be/oAkPcpzjDBI?si=ftFP_FHRMIn7OSkg" target="_blank" rel="noopener noreferrer">Watch Video</a>
+					<a class="btn" href="#properties">Learn Properties</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="properties" class="section">
+			<div class="container">
+				<h2 class="section__title">Essential CSS Properties</h2>
+				<div class="property-grid">
+					<div class="property-card">
+						<h3>Layout Properties</h3>
+						<div class="property-demo">
+							<div class="demo-box demo-width">Width & Height</div>
+							<div class="demo-box demo-max-width">Max Width</div>
+							<div class="demo-box demo-margin">Margin</div>
+							<div class="demo-box demo-padding">Padding</div>
+						</div>
+					</div>
+					
+					<div class="property-card">
+						<h3>Typography</h3>
+						<div class="property-demo">
+							<p class="demo-font-family">Font Family</p>
+							<p class="demo-font-weight">Font Weight</p>
+							<p class="demo-font-size">Font Size</p>
+							<p class="demo-font-style">Font Style</p>
+							<p class="demo-text-align">Text Align</p>
+							<p class="demo-line-height">Line Height</p>
+							<p class="demo-letter-spacing">Letter Spacing</p>
+						</div>
+					</div>
+					
+					<div class="property-card">
+						<h3>Visual Effects</h3>
+						<div class="property-demo">
+							<div class="demo-box demo-color">Color</div>
+							<div class="demo-box demo-bg-color">Background</div>
+							<div class="demo-box demo-border">Border</div>
+							<div class="demo-box demo-radius">Border Radius</div>
+							<div class="demo-box demo-shadow">Box Shadow</div>
+						</div>
+					</div>
+					
+					<div class="property-card">
+						<h3>Interactive</h3>
+						<div class="property-demo">
+							<div class="demo-box demo-transition">Transition</div>
+							<div class="demo-box demo-cursor">Cursor</div>
+							<div class="demo-box demo-opacity">Opacity</div>
+							<div class="demo-box demo-overflow">Overflow</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="examples" class="section">
+			<div class="container">
+				<h2 class="section__title">Property Examples</h2>
+				<div class="example-grid">
+					<div class="example-card">
+						<h3>Box Model</h3>
+						<div class="box-model-demo">
+							<div class="box-outer">
+								<div class="box-inner">
+									<span>Content</span>
+								</div>
+							</div>
+						</div>
+						<p>Demonstrates margin, padding, and border properties</p>
+					</div>
+					
+					<div class="example-card">
+						<h3>Responsive Text</h3>
+						<div class="text-demo">
+							<h4 class="responsive-text">Responsive Typography</h4>
+							<p class="responsive-paragraph">This text adapts to different screen sizes using CSS properties like font-size, line-height, and max-width.</p>
+						</div>
+					</div>
+					
+					<div class="example-card">
+						<h3>Hover Effects</h3>
+						<div class="hover-demo">
+							<button class="hover-button">Hover Me</button>
+							<div class="hover-card">Hover Card</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>Created by Meekal • Buildables MERN Fellowship • Week 1</p>
+		</div>
+	</footer>
+</body>
+</html>
