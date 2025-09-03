@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind - CSS</title>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <header class="sticky top-0 bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 text-gray-800 hover:text-primary transition-colors">
+                <img src="./assets/icons/buildables.png" alt="Buildables Logo" class="h-8">
+                <span class="font-bold text-xl">Buildables</span>
+            </a>
+            <nav class="flex gap-6">
+                <a href="#home" class="text-primary font-medium">Home</a>
+                <a href="#properties" class="text-gray-600 hover:text-primary transition-colors">Properties</a>
+                <a href="#examples" class="text-gray-600 hover:text-primary transition-colors">Examples</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Tailwind CSS Properties</h1>
+                <p class="text-xl text-gray-600 mb-8">Exploring essential Tailwind CSS properties with practical examples.</p>
+                <div class="flex gap-4 justify-center">
+                    <a href="https://www.youtube.com/watch?v=dFgzHOX84xQ&t=336s" target="_blank" rel="noopener noreferrer" 
+                       class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Watch Video
+                    </a>
+                    <a href="#properties" 
+                       class="bg-white text-primary px-6 py-2 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-colors">
+                        Learn Properties
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="properties" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Essential Tailwind CSS Properties</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Layout Properties Card -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Layout Properties</h3>
+                        <div class="space-y-4">
+                            <div class="bg-gray-100 p-4 rounded">Width & Height</div>
+                            <div class="bg-gray-100 p-4 rounded">Max Width</div>
+                            <div class="bg-gray-100 p-4 rounded">Margin</div>
+                            <div class="bg-gray-100 p-4 rounded">Padding</div>
+                        </div>
+                    </div>
+
+                    <!-- Typography Card -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Typography</h3>
+                        <div class="space-y-4">
+                            <p class="font-sans">Font Family</p>
+                            <p class="font-bold">Font Weight</p>
+                            <p class="text-2xl">Font Size</p>
+                            <p class="italic">Font Style</p>
+                            <p class="text-center">Text Align</p>
+                            <p class="leading-loose">Line Height</p>
+                            <p class="tracking-wide">Letter Spacing</p>
+                        </div>
+                    </div>
+
+                    <!-- Visual Effects Card -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Visual Effects</h3>
+                        <div class="space-y-4">
+                            <div class="text-primary">Color</div>
+                            <div class="bg-gray-200 p-2 rounded">Background</div>
+                            <div class="border-2 border-primary p-2">Border</div>
+                            <div class="rounded-full bg-gray-200 p-2">Border Radius</div>
+                            <div class="shadow-lg p-2">Box Shadow</div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Card -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Interactive</h3>
+                        <div class="space-y-4">
+                            <div class="transition-transform hover:scale-105 bg-gray-100 p-2">Transition</div>
+                            <div class="cursor-pointer bg-gray-100 p-2">Cursor</div>
+                            <div class="hover:opacity-50 bg-gray-100 p-2">Opacity</div>
+                            <div class="overflow-hidden bg-gray-100 p-2">Overflow</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Property Examples</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Box Model</h3>
+                        <div class="border-4 border-gray-200 p-4">
+                            <div class="border-2 border-primary p-4">
+                                <span class="block text-center">Content</span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600">Demonstrates margin, padding, and border properties</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Responsive Text</h3>
+                        <h4 class="text-2xl md:text-3xl mb-2">Responsive Typography</h4>
+                        <p class="text-gray-600">This text adapts to different screen sizes using Tailwind's responsive classes.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Hover Effects</h3>
+                        <button class="w-full mb-4 bg-primary text-white py-2 px-4 rounded hover:bg-opacity-90 transition-colors">
+                            Hover Me
+                        </button>
+                        <div class="p-4 bg-gray-100 rounded hover:shadow-lg transition-shadow">
+                            Hover Card
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>Created by Meekal • Buildables MERN Fellowship • Week 3</p>
+        </div>
+    </footer>
+</body>
+</html>
