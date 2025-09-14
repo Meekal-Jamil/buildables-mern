@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Day 2+3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive To-Do List</h1>
+            <p>Demonstrating DOM Manipulation & Async JavaScript</p>
+        </header>
+
+        <section class="add-task">
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Add a new task..." required>
+                <button type="submit" id="add-button">
+                    <i class="fas fa-plus"></i> Add
+                </button>
+            </form>
+        </section>
+
+        <section class="controls">
+            <div class="task-stats">
+                <span id="task-count">0 tasks</span>
+                <span id="completed-count">0 completed</span>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <button id="fetch-todos">
+                <i class="fas fa-cloud-download-alt"></i> Load Sample Tasks
+            </button>
+        </section>
+
+        <section class="todo-list">
+            <ul id="tasks"></ul>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Loading tasks...</p>
+            </div>
+            <div id="empty-list" class="hidden">
+                <p>No tasks found. Add a new task or load sample tasks.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week4-Day1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .output {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Fundamentals</h1>
+    
+    <section id="variables-section">
+        <h2>Variables & Data Types</h2>
+        <div class="output" id="variables-output"></div>
+    </section>
+    
+    <section id="operators-section">
+        <h2>Operators</h2>
+        <div class="output" id="operators-output"></div>
+    </section>
+    
+    <section id="functions-section">
+        <h2>Functions</h2>
+        <div class="output" id="functions-output"></div>
+    </section>
+    
+    <section id="control-flow-section">
+        <h2>Control Flow</h2>
+        <div class="output" id="control-flow-output"></div>
+    </section>
+    
+    <section id="dom-section">
+        <h2>DOM Manipulation</h2>
+        <button id="changeText">Change Text</button>
+        <button id="changeColor">Change Color</button>
+        <button id="addItem">Add List Item</button>
+        <div class="output" id="dom-output">
+            <p id="demo-text">This text will change.</p>
+            <ul id="demo-list">
+                <li>Item 1</li>
+            </ul>
+        </div>
+    </section>
+    <script src="js/01-variables.js"></script>
+    <script src="js/02-operators.js"></script>
+    <script src="js/03-functions.js"></script>
+    <script src="js/04-control-flow.js"></script>
+    <script src="js/05-dom-manipulation.js"></script>
+</body>
+</html>

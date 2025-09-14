@@ -1,0 +1,224 @@
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #484b6a;
+    --todo-bg: #ffffff;
+    --todo-border: #e6e5ea;
+    --completed-text: #d1d2da;
+    --filter-hover: #3a7bfd;
+    --header-bg: #333333; /* Dark grey header */
+    --add-button-color: #ff9500; /* Orange color for add button */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 540px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.todo-form {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#todo-input {
+    width: 100%;
+    padding: 18px 60px 18px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--todo-bg);
+    font-size: 16px;
+    color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#todo-input::placeholder {
+    color: #9394a5;
+}
+
+#todo-form button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--add-button-color); /* Orange background */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 2px solid darkorange; /* Add border */
+}
+
+#todo-form button:hover {
+    background-color: #e68a00; /* Slightly darker on hover */
+}
+
+.todo-container {
+    background-color: var(--todo-bg);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.todo-list {
+    list-style-type: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--todo-border);
+}
+
+.todo-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--todo-border);
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.todo-checkbox:checked {
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    border: none;
+}
+
+.todo-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 16px;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: var(--completed-text);
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #9394a5;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.todo-item:hover .delete-btn {
+    opacity: 1;
+}
+
+.todo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #9394a5;
+    font-size: 14px;
+}
+
+.todo-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn, .clear-btn {
+    background: none;
+    border: none;
+    color: #9394a5;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.filter-btn:hover, .clear-btn:hover {
+    color: var(--filter-hover);
+}
+
+.filter-btn.active {
+    color: var(--filter-hover);
+}
+
+.hint {
+    text-align: center;
+    margin-top: 50px;
+    color: #9394a5;
+    font-size: 14px;
+}
+
+/* Change header background to dark grey */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: var(--header-bg); /* Dark grey background */
+    z-index: -1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 550px) {
+    .todo-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .todo-filters {
+        order: 2;
+        margin: 15px 0;
+    }
+    
+    #todo-count {
+        order: 1;
+    }
+    
+    .clear-btn {
+        order: 3;
+    }
+}

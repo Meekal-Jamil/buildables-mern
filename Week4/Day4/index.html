@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Day 4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Multi-Function Calculator</h1>
+            <p>Demonstrating Different Types of JavaScript Functions</p>
+        </header>
+
+        <div class="calculator">
+            <div class="display">
+                <div id="calculation-history"></div>
+                <div id="current-input">0</div>
+            </div>
+
+            <div class="calculator-pad">
+                <div class="function-sections">
+                    <div class="function-row">
+                        <div class="function-type">
+                            <h3>Function Declaration</h3>
+                            <div class="buttons">
+                                <button class="btn operation" data-function-type="declaration" data-operation="add">Add (+)</button>
+                                <button class="btn operation" data-function-type="declaration" data-operation="subtract">Subtract (-)</button>
+                            </div>
+                        </div>
+
+                        <div class="function-type">
+                            <h3>Function Expression</h3>
+                            <div class="buttons">
+                                <button class="btn operation" data-function-type="expression" data-operation="multiply">Multiply (×)</button>
+                                <button class="btn operation" data-function-type="expression" data-operation="divide">Divide (÷)</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="function-row">
+                        <div class="function-type">
+                            <h3>Arrow Function</h3>
+                            <div class="buttons">
+                                <button class="btn operation" data-function-type="arrow" data-operation="power">Power (^)</button>
+                                <button class="btn operation" data-function-type="arrow" data-operation="modulo">Modulo (%)</button>
+                            </div>
+                        </div>
+
+                        <div class="function-type">
+                            <h3>Higher-Order Function</h3>
+                            <div class="buttons">
+                                <button class="btn operation" data-function-type="higher-order" data-operation="square">Square (x²)</button>
+                                <button class="btn operation" data-function-type="higher-order" data-operation="sqrt">Square Root (√)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-input">
+                    <div class="number-pad">
+                        <button class="btn number" data-number="7">7</button>
+                        <button class="btn number" data-number="8">8</button>
+                        <button class="btn number" data-number="9">9</button>
+                        <button class="btn number" data-number="4">4</button>
+                        <button class="btn number" data-number="5">5</button>
+                        <button class="btn number" data-number="6">6</button>
+                        <button class="btn number" data-number="1">1</button>
+                        <button class="btn number" data-number="2">2</button>
+                        <button class="btn number" data-number="3">3</button>
+                        <button class="btn number" data-number="0">0</button>
+                        <button class="btn" id="decimal">.</button>
+                        <button class="btn" id="clear">C</button>
+                    </div>
+                    
+                    <button class="btn equals" id="equals">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/calculator.js"></script>
+</body>
+</html>
